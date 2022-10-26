@@ -31,11 +31,11 @@ public class MainDir {
 			for (int i = 0; i < contingut.length; i++) {
 				if (contingut[i].isDirectory()) {//li diem que si es directory imprimexi D el directori i la data amb els simbols de l'arbre
 					arxiu = "D" + tab + "+-" + contingut[i].getName();
-					veureArbre(contingut[i], tab + "|  ");
+					veureArbre(contingut[i], tab + "|  "); //cridem al mètode de forma recursiva.
 				} else if (contingut[i].isFile()) {//li diem que si es arxiu imprimexi F i la data amb els simbols de l'arbre
 					arxiu = "F" + tab + "+-" + contingut[i].getName();
 					escriureArxiu(arxiu); //escribim la ruta al txt amb el mètode
-					veureArbre(contingut[i], tab + "|  "); 
+					veureArbre(contingut[i], tab + "|  "); //tornem a cridar el mètode de forma recursiva.
 				} 
 			}
 		}
